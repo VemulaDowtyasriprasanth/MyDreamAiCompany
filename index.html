@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LovAI-The Future belongs to us </title>
+    <!-- Add your CSS file link here -->
+    <link rel="stylesheet" href="style5.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to LovAI Services Startup</h1>
+        <nav>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <div>
+            <h3>Service-based AI Solutions</h3>
+            <!-- Add details and more sub-sections for each service -->
+            <div class="service" data-service="customer-support">
+                <h4>AI-Powered Customer Support</h4>
+                <p>Offering 24/7 customer service with AI chatbots for inquiries and issue resolution.</p>
+                <button onclick="location.href='hire_form.html?service=customer_support'">Hire for $7,000/year</button>
+            </div>
+    
+            <div class="service" data-service="data-entry"  >
+                <h4>Data Entry and Management</h4>
+                <p>Efficient data management with AI for data entry, validation, and organization.</p>
+                <button onclick="location.href='hire_form.html?service=data_entry'">Hire for $7,500/year</button>
+            </div>
+    
+            <!-- Repeat for other services -->
+    
+            <div class="service"    data-service="sentiment-analysis"     style="background-image: url('Ai Assisted Medical Coding.png');"   >
+                <h4>Sentiment Analysis for Customer Feedback</h4>
+                <p>AI to analyze customer feedback, gauge sentiment, and identify improvement areas.</p>
+                <button onclick="location.href='hire_form.html?service=sentiment_analysis'">Hire for $8,000/year</button>
+            </div>
+            <div class="service" data-service="construction" >
+                <h4>AI for Construction and Factories</h4>
+                <p>Robotic AI solutions for automating hard labour in construction and manufacturing.</p>
+                <button onclick="location.href='hire_form.html?service=construction_ai'">Hire for $9,000/year</button>
+            </div>
+    
+            <!-- AI for Home Makers and Cooking -->
+            <div class="service" data-service="home-assistant">
+                <h4>AI Home Assistants</h4>
+                <p>Intelligent AI assistants for household tasks and cooking, enhancing home management.</p>
+                <button onclick="location.href='hire_form.html?service=home_ai'">Hire for $12,000/year</button>
+            </div>
+        </div>
+        </div>
+        <div>
+            <h3>Professional Ai  Services</h3>
+            <!-- Add details and more sub-sections for each service -->
+            <div class="service" data-service="data-scientist" >
+                <h4>AI Data Scientist</h4>
+                <p>Comprehensive data analysis and insight generation using advanced AI algorithms.</p>
+                <button onclick="location.href='hire_form.html?service=ai_data_scientist'">Hire for $10,000/year</button>
+            </div>
+    
+            <!-- AI Data Analyst -->
+            <div class="service" data-service="data-analyst" >
+                <h4>AI Data Analyst</h4>
+                <p>AI-driven data analysis for business intelligence and decision making.</p>
+                <button onclick="location.href='hire_form.html?service=ai_data_analyst'">Hire for $11,000/year</button>
+            </div>
+    
+            <!-- AI Software Developer -->
+            <div class="service" data-service="software-developer" >
+                <h4>AI Software Developer</h4>
+                <p>Development of sophisticated software solutions using AI technologies.</p>
+                <button onclick="location.href='hire_form.html?service=ai_software_developer'">Hire for $12,000/year</button>
+            </div>
+    
+            <!-- AI for Front-End and Back-End Development -->
+            <div class="service" data-service="front-end-developer" style="background-image: url('background.png');" > 
+                <h4>AI for Front-End Development</h4>
+                <p>AI solutions for innovative and interactive front-end web development.</p>
+                <button onclick="location.href='hire_form.html?service=ai_front_end'">Hire for $13,000/year</button>
+            </div>
+            <div class="service" data-service="back-end-developer"  style="background-image: url('background.png');">
+                <h4>AI for Back-End Development</h4>
+                <p>Efficient and scalable back-end development powered by AI.</p>
+                <button onclick="location.href='hire_form.html?service=ai_back_end'">Hire for $14,000/year</button>
+            </div>
+    
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>
+            <!-- Add information about your startup -->
+            <p>
+                In an era where innovation is key, our AI Data Scientist offers unparalleled expertise at a fraction of the cost. Why pay 100k a year when our AI can provide cutting-edge data science solutions for just 10k? Our AI works tirelessly, around the clock, without the need for breaks or vacation. Join the revolution in data science with our AI services.
+            </p>
+        </p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-container">
+            <form onsubmit="submitForm(event);">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name..." required>
+                
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="Your email..." required>
+                
+                <label for="service">Service Interest</label>
+                <select id="service" name="service">
+                    <option value="">--Please choose an option--</option>
+                    <option value="customer_support">AI-Powered Customer Support</option>
+                    <option value="data_entry">Data Entry and Management</option>
+                    <!-- Add other service options here -->
+                </select>
+                
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" placeholder="Your message..." required></textarea>
+                
+                <input type="submit" value="Send">
+            </form>
+            <!-- The Thank You Message will be displayed here after form submission -->
+            <div id="thankYouMessage" style="display: none;">
+                Thank you for contacting us! We will be in touch soon.
+            </div>
+        </div>
+    </section>
+    
+    <script>
+      function submitForm(event) {
+        event.preventDefault(); // Prevent the default form submission
+        document.getElementById('thankYouMessage').style.display = 'block'; // Show the thank you message
+        // Optionally, hide the form
+        event.target.style.display = 'none';
+      }
+    </script>
+
+    <footer>
+        <p>© 2023 Your AI IT The Future is us .</p>
+    </footer>
+
+    <!-- Add your JavaScript file link here -->
+</body>
+</html>

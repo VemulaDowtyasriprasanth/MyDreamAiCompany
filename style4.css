@@ -1,0 +1,93 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* Services Section */
+.service {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 30px 0;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Overlay to ensure text readability */
+.service::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3); /* Darker overlay for better readability */
+    border-radius: 10px;
+    z-index: 1;
+}
+
+/* Text styles */
+.service h4 {
+    font-size: 1.5em; /* Larger font-size for headings */
+    color: #fff;
+    margin-bottom: 15px;
+    z-index: 2;
+}
+
+.service p {
+    font-size: 1.1em;
+    color: #fff;
+    margin-bottom: 20px;
+    z-index: 2;
+}
+
+/* Button styles */
+.button {
+    font-size: 1em;
+    font-weight: bold;
+    padding: 10px 25px;
+    background-color: #007bff; /* Bootstrap primary color for demo */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.button:hover {
+    background-color: #0056b3; /* Darker shade for hover state */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #333;
+    color: white;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .service {
+        margin: 20px 10px;
+        padding: 30px 20px;
+    }
+}

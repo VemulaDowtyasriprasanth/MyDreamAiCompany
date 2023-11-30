@@ -1,0 +1,279 @@
+
+/* Reset and base styles */
+/* Button styling */
+
+/* Ensure high contrast for text for readability */
+header, #about h2, #contact h2, footer {
+    color: #fff; /* White text */
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); /* Text shadow for readability */
+}
+
+/* Semi-transparent overlay for sections to improve visibility of text */
+#about {
+    background-color: #ffd700; /* This is a gold color */
+    color: rgb(0, 0, 0); /* Assuming you want white text for contrast */
+    padding: 20px;
+    text-align: center; /* Center the text */
+}
+
+#contact .contact-container {
+    background: rgba(0, 0, 0, 0.7); /* Dark background with some transparency */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 20px; /* Space between sections */
+}
+
+/* Adjust the form input fields for better visibility */
+#contact input[type='text'],
+#contact input[type='email'],
+#contact select,
+#contact textarea {
+    background: rgba(255, 255, 255, 0.9); /* Light background for input fields */
+    border: 1px solid #ddd; /* Light border */
+    color: #333; /* Dark text */
+}
+
+
+.service .button {
+    font-size: 1em; /* Adjust the font size as needed */
+    font-weight: bold; /* Makes the text bold */
+    padding: 12px 24px; /* Adjust padding to your preference */
+    background-color: #000; /* Black background */
+    color: #ffd700; /* Gold color text */
+    border: 3px solid #ffd700; /* Gold border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase; /* Makes text uppercase */
+    text-decoration: none; /* Removes underline from links */
+    display: inline-block; /* Allows setting padding and width/height */
+    margin-top: 10px; /* Adds space between the button and text above it */
+}
+.service .button:hover {
+    background-color: #ffd700; /* Gold background on hover */
+    color: #000; /* Black text on hover */
+}
+
+
+/* Contact Form Styling */
+#contact {
+    background-color: #fff; /* White background for the form */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners for the form */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Shadow for depth */
+    text-align: center;
+    max-width: 400px; /* Maximum width of the form */
+    margin: auto; /* Center form in the middle of the page */
+}
+
+#contact h2 {
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+#contact input[type='text'],
+#contact input[type='email'],
+#contact select,
+#contact textarea {
+    width: calc(100% - 20px); /* Full width minus padding */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 4px; /* Slightly rounded corners for input fields */
+    box-sizing: border-box;
+}
+
+#contact textarea {
+    height: 100px; /* Larger height for the message field */
+    resize: vertical; /* Allow only vertical resizing */
+}
+
+#contact input[type='submit'] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    background-color: #4CAF50; /* Green background for the 'Send' button */
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#contact input[type='submit']:hover {
+    background-color: #45a049; /* Slightly darker green for the hover state */
+}
+
+/* Additional responsiveness for smaller screens */
+@media (max-width: 768px) {
+    #contact {
+        width: 90%;
+        padding: 10px;
+    }
+}
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #000000;
+    background-color: #000000;
+    padding: 20px;
+    /* background-image: url('background.png'); */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+header {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 1rem 0;
+}
+
+header h1, header nav a {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Services grid layout */
+#services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+    color: white;
+}
+
+/* Service card styling */
+.service {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+}
+
+/* Overlay for text readability */
+.service::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.service h4, .service p {
+    z-index: 2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Enlarged and colored 'Hire Me' button */
+.service .button {
+    font-size: 1.2em;
+    padding: 15px 30px;
+    background-color: #ffd700;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 2;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.service .button:hover {
+    background-color: #ffae42;
+    transform: scale(1.05);
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #333;
+    color: white;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    header nav ul li a, .service, .service .button {
+        font-size: smaller;
+    }
+}
+
+/* Service-specific background images */
+.service[data-service="customer-support"] {
+    background-image: url('Customer-support.png');
+}
+
+.service[data-service="data-entry"] {
+    background-image: url('MAnagement.png');
+}
+
+.service[data-service="transcription"] {
+    background-image: url('Transcription.png');
+}
+
+.service[data-service="construction"] {
+    background-image: url('inventory.png');
+}
+
+.service[data-service="home-assistant"] {
+    background-image: url('Virtual-Personal assitant.png');
+}
+
+.service[data-service="data-scientist"] {
+    background-image: url('Ai Assisted Medical Coding.png');
+}
+
+.service[data-service="data-analyst"] {
+    background-image: url('market.png');
+}
+
+.service[data-service="software-developer"] {
+    background-image: url('Language.png');
+}
+
+.service[data-service="front-end-developer"] {
+    background-image: url('DALL·E 2023-11-29 20.27.59 - An image depicting AI analytics tools analyzing market trends.png');
+}
+
+.service[data-service="back-end-developer"] {
+    background-image: url('background.png');
+}
